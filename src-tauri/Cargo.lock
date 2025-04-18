@@ -42,6 +42,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "android-bluetooth-serial"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3e6ac2bbb95d279999332bbbd06afccdbf2d5e6092ff663d5e7b29f245311eb9"
+dependencies = [
+ "jni-min-helper",
+ "log",
+]
+
+[[package]]
 name = "android-tzdata"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1767,6 +1777,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4a5f13b858c8d314ee3e8f639011f7ccefe71f97f96e50151fb991f267928e2c"
 
 [[package]]
+name = "java-locator"
+version = "0.1.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "09c46c1fe465c59b1474e665e85e1256c3893dd00927b8d55f63b09044c1e64f"
+dependencies = [
+ "glob",
+]
+
+[[package]]
 name = "javascriptcore-rs"
 version = "1.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1798,11 +1817,25 @@ dependencies = [
  "cesu8",
  "cfg-if",
  "combine",
+ "java-locator",
  "jni-sys",
+ "libloading",
  "log",
  "thiserror 1.0.69",
  "walkdir",
  "windows-sys 0.45.0",
+]
+
+[[package]]
+name = "jni-min-helper"
+version = "0.2.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "469d9afe65c609a9442c07d449d56dfaf9f3fc6b3875f1427cc4e7ad2878e07c"
+dependencies = [
+ "java-locator",
+ "jni",
+ "log",
+ "ndk-context",
 ]
 
 [[package]]
@@ -3756,6 +3789,7 @@ dependencies = [
 name = "tauri_app"
 version = "0.1.0"
 dependencies = [
+ "android-bluetooth-serial",
  "serde",
  "serde_json",
  "tauri",
