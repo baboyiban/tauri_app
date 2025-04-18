@@ -3790,6 +3790,7 @@ name = "tauri_app"
 version = "0.1.0"
 dependencies = [
  "android-bluetooth-serial",
+ "parking_lot",
  "serde",
  "serde_json",
  "tauri",

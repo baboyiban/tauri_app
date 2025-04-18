@@ -22,5 +22,8 @@ tauri = { version = "2", features = [] }
 tauri-plugin-opener = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+# Bluetooth 시리얼 크레이트 추가
 android-bluetooth-serial = "0.1.0"
+# 스레드 안전한 상태 관리를 위해 parking_lot 또는 std::sync::Mutex/Arc 필요
+parking_lot = "0.12" # 또는 std::sync = { version = "...", features = ["parking_lot"] }
 
